@@ -39,49 +39,45 @@ main {
     }
   }
   #header {
-    position: relative;
+    position: fixed;
     height: auto;
     width: 100%;
+    height: 5em;
     background: rgba(26, 26, 26, 0.966);
-    //margin-top: 3.1em;
-    padding-bottom: 0.5em;
+    top: 0;
+    padding: 0.5em;
     display: flex;
-    /*  display: grid;
-    grid-template-columns: 0.5fr 8fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo name" "menu menu"; */
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
 
     img#header-img {
-      width: 40px;
+      // position: relative;
+      width: 30%;
+      height: 4em;
       height: auto;
       display: block;
       margin: 0px 10px;
       float: left;
       grid-area: logo;
     }
-    h1#name {
-      margin-top: 5px;
-      color: white;
-      font-family: "Century Gothic", Roboto, sans-serif;
-      font-weight: 100;
-      float: left;
-      font-size: 3vh;
-      grid-area: name;
-    }
+
     #nav-bar {
       position: absolute;
       top: 3em;
       width: 100%;
       height: auto;
-      background: rgba(26, 26, 26, 0.966);
-      grid-area: menu;
-      padding: 1em 0;
+      margin-top: 1em;
+      //background: silver;
+      bottom: 0;
+      padding: 0.5em 0 0 0;
+      margin-right: 1.5em;
       border-top: 1px solid silver;
 
       ul {
         list-style: none;
         padding: 0%;
-        background: chocolate;
+        background: rgba(210, 105, 30, 0.568);
         text-align: right;
 
         li {
@@ -92,9 +88,65 @@ main {
 
           a {
             text-decoration: none;
-            color: black;
+            color: white;
+            font-weight: normal;
+            font-family: Roboto, "Century Gothic", sans-serif;
           }
         }
+      }
+    }
+  }
+  .presentación {
+    margin-top: 5.1em;
+    padding-top: 1em;
+
+    img {
+      position: relative;
+      margin: 10px auto;
+      display: block;
+      width: 50%;
+      height: auto;
+      box-shadow: 0px 3px 3px white;
+      padding: 1em;
+    }
+    p {
+      position: relative;
+      margin: 10px auto;
+      width: 90%;
+      height: auto;
+      padding: 0.5em;
+      font-family: Roboto, "Century Gothic", sans-serif;
+      background: rgba(255, 255, 255, 0.753);
+      span {
+        display: block;
+        font-size: 1.5em;
+        padding: 0.5em;
+        font-family: "Century Gothic", sans-serif;
+      }
+    }
+    iframe {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      width: 90%;
+      //height: 250px;
+    }
+    #form {
+      position: relative;
+      display: block;
+      margin: 50px auto;
+      width: 90%;
+      background: rgba(210, 105, 30, 0.568);
+      padding: 10px;
+      display: flex;
+      label {
+        color: white;
+        margin: 5px;
+        flex-grow: 0;
+      }
+      input {
+        flex-grow: 2;
+        padding-left: 5px;
       }
     }
   }
@@ -112,8 +164,8 @@ main {
       font-family: "Century Gothic", Roboto, sans-serif;
       font-weight: normal;
       font-size: 1.5em;
-      background: chocolate;
-      color: white;
+      background: white;
+      color: chocolate;
     }
     h2 {
       width: 83%;
@@ -201,7 +253,7 @@ main {
       height: auto;
       margin: 0 auto 0 auto;
       color: white;
-      background: rgba(247, 150, 39, 0.685);
+      background: chocolate;
       padding-top: 0.2em;
       display: grid;
       grid-template-columns: 1fr;
@@ -234,9 +286,39 @@ main {
         p {
           font-family: Roboto, "Century Gothic", sans-serif;
           font-size: 1.5em;
-          color: rgb(230, 192, 24);
+          color: chocolate;
           background: rgba(22, 21, 22, 0.842);
           padding: 0;
+        }
+      }
+    }
+    #item-section {
+      .item-warranty {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        text-align: center;
+
+        img {
+          position: relative;
+          margin: 10px auto;
+          display: block;
+          width: 50%;
+          height: auto;
+          box-shadow: 0px 3px 3px white;
+        }
+        p {
+          width: 90%;
+          height: auto;
+          padding: 0.5em;
+          font-family: Roboto, "Century Gothic", sans-serif;
+          span {
+            display: block;
+            font-size: 1.5em;
+            padding: 0.5em;
+            font-family: "Century Gothic", sans-serif;
+          }
         }
       }
     }
@@ -314,6 +396,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+  }
+  main .content-page #item-section {
+    .item-warranty {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
   }
 }
 @media (min-width: 800px) {

@@ -41,22 +41,28 @@ main #title h1 {
 }
 
 main #header {
-  position: relative;
+  position: fixed;
   height: auto;
   width: 100%;
+  height: 5em;
   background: rgba(26, 26, 26, 0.966);
-  padding-bottom: 0.5em;
+  top: 0;
+  padding: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*  display: grid;
-    grid-template-columns: 0.5fr 8fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "logo name" "menu menu"; */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
 }
 
 main #header img#header-img {
-  width: 40px;
+  width: 30%;
+  height: 4em;
   height: auto;
   display: block;
   margin: 0px 10px;
@@ -64,31 +70,22 @@ main #header img#header-img {
   grid-area: logo;
 }
 
-main #header h1#name {
-  margin-top: 5px;
-  color: white;
-  font-family: "Century Gothic", Roboto, sans-serif;
-  font-weight: 100;
-  float: left;
-  font-size: 3vh;
-  grid-area: name;
-}
-
 main #header #nav-bar {
   position: absolute;
   top: 3em;
   width: 100%;
   height: auto;
-  background: rgba(26, 26, 26, 0.966);
-  grid-area: menu;
-  padding: 1em 0;
+  margin-top: 1em;
+  bottom: 0;
+  padding: 0.5em 0 0 0;
+  margin-right: 1.5em;
   border-top: 1px solid silver;
 }
 
 main #header #nav-bar ul {
   list-style: none;
   padding: 0%;
-  background: chocolate;
+  background: rgba(210, 105, 30, 0.568);
   text-align: right;
 }
 
@@ -101,7 +98,76 @@ main #header #nav-bar ul li {
 
 main #header #nav-bar ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-weight: normal;
+  font-family: Roboto, "Century Gothic", sans-serif;
+}
+
+main .presentación {
+  margin-top: 5.1em;
+  padding-top: 1em;
+}
+
+main .presentación img {
+  position: relative;
+  margin: 10px auto;
+  display: block;
+  width: 50%;
+  height: auto;
+  -webkit-box-shadow: 0px 3px 3px white;
+          box-shadow: 0px 3px 3px white;
+  padding: 1em;
+}
+
+main .presentación p {
+  position: relative;
+  margin: 10px auto;
+  width: 90%;
+  height: auto;
+  padding: 0.5em;
+  font-family: Roboto, "Century Gothic", sans-serif;
+  background: rgba(255, 255, 255, 0.753);
+}
+
+main .presentación p span {
+  display: block;
+  font-size: 1.5em;
+  padding: 0.5em;
+  font-family: "Century Gothic", sans-serif;
+}
+
+main .presentación iframe {
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+}
+
+main .presentación #form {
+  position: relative;
+  display: block;
+  margin: 50px auto;
+  width: 90%;
+  background: rgba(210, 105, 30, 0.568);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .presentación #form label {
+  color: white;
+  margin: 5px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+main .presentación #form input {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding-left: 5px;
 }
 
 main .content-page {
@@ -119,8 +185,8 @@ main .content-page h1 {
   font-family: "Century Gothic", Roboto, sans-serif;
   font-weight: normal;
   font-size: 1.5em;
-  background: chocolate;
-  color: white;
+  background: white;
+  color: chocolate;
 }
 
 main .content-page h2 {
@@ -220,7 +286,7 @@ main .content-page #price {
   height: auto;
   margin: 0 auto 0 auto;
   color: white;
-  background: rgba(247, 150, 39, 0.685);
+  background: chocolate;
   padding-top: 0.2em;
   display: -ms-grid;
   display: grid;
@@ -265,9 +331,44 @@ main .content-page #price .item-price img {
 main .content-page #price .item-price p {
   font-family: Roboto, "Century Gothic", sans-serif;
   font-size: 1.5em;
-  color: #e6c018;
+  color: chocolate;
   background: rgba(22, 21, 22, 0.842);
   padding: 0;
+}
+
+main .content-page #item-section .item-warranty {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 10px;
+  text-align: center;
+}
+
+main .content-page #item-section .item-warranty img {
+  position: relative;
+  margin: 10px auto;
+  display: block;
+  width: 50%;
+  height: auto;
+  -webkit-box-shadow: 0px 3px 3px white;
+          box-shadow: 0px 3px 3px white;
+}
+
+main .content-page #item-section .item-warranty p {
+  width: 90%;
+  height: auto;
+  padding: 0.5em;
+  font-family: Roboto, "Century Gothic", sans-serif;
+}
+
+main .content-page #item-section .item-warranty p span {
+  display: block;
+  font-size: 1.5em;
+  padding: 0.5em;
+  font-family: "Century Gothic", sans-serif;
 }
 
 main #footer {
@@ -365,6 +466,14 @@ main #footer a:hover {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  main .content-page #item-section .item-warranty {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
   }

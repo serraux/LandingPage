@@ -15,38 +15,80 @@
   </head>
   <body>
     <main>
-      <div id="title"><h1>Landing Page</h1></div>
+      <!--  <div id="title"><h1>Landing Page</h1></div> -->
       <!-- Encabezado -->
       <header id="header">
         <img
           id="header-img"
-          src="./img/mercadodigital.svg"
+          src="./img/logomercado.svg"
           alt="logo mercado digital"
         />
-        <h1 id="name">Mercado Digital</h1>
+
         <nav id="nav-bar">
           <ul>
-            <li class="nav-link">
-              <a href="#products">Productos</a>
+            <li>
+              <a href="#products" class="nav-link">Productos</a>
             </li>
-            <li class="nav-link">
-              <a href="#price">Precios</a>
+            <li>
+              <a href="#price" class="nav-link">Precios</a>
             </li>
-            <li class="nav-link">
-              <a href="#warranty">Garantía</a>
+            <li>
+              <a href="#warranty" class="nav-link">Garantía</a>
             </li>
-            <li class="nav-link">
-              <a href="#payment-methods">Medios de Pago</a>
+            <li>
+              <a href="#payment-methods" class="nav-link">Medios de Pago</a>
             </li>
           </ul>
         </nav>
       </header>
-<!-- Productos -->
+      <!-- Presentación -->
+      <div class="presentación">
+        <img src="./img/logomercado.svg" alt="Logo mercado digital" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nam
+          repellendus minus modi unde impedit dignissimos ea natus ex vero fugit
+          consequatur facilis ab repellat, illum, nulla sint incidunt
+          praesentium.
+        </p>
+
+        <form
+          action="https://www.freecodecamp.com/email-submit"
+          id="form"
+          target="_blank"
+        >
+          <label for="email"
+            >Para recibir información personalizada ingrese su email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="usuario@correo.com"
+          />
+          <input type="submit" id="submit" />
+        </form>
+
+        <!--  <iframe
+          src="https://youtu.be/HE1eFIQMw6Q"
+          frameborder="0"
+          id="video"
+          allowfullscreen
+        ></iframe> -->
+        <iframe
+          id="video"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/HE1eFIQMw6Q?rel=0&amp;controls=0&amp;showinfo=0"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Productos -->
       <div class="content-page">
         <h1 class="title-item" id="products">Productos</h1>
-         <h2>Celulares</h2>
+        <h2>Celulares</h2>
         <div class="item">
-         
           <img
             src="./img/cellphone.svg"
             alt="imagen celular"
@@ -127,13 +169,12 @@
           </p>
         </div>
       </div>
-      <!--Section  Price -->
+      <!--precios -->
       <div class="content-page">
         <h1 class="title-item" id="price">Precios</h1>
-        <section id="price">
-        
-        <div class="item-price">
-        <h3>Celulares desde</h3>
+        <div id="price">
+          <div class="item-price">
+            <h3>Celulares desde:</h3>
             <p>$250mil</p>
             <img
               src="./img/cellphone.svg"
@@ -142,8 +183,8 @@
             />
             <a href="#">Ver modelos diponibles</a>
           </div>
-           <div class="item-price">
-        <h3>Tablets desde</h3>
+          <div class="item-price">
+            <h3>Tablets desde:</h3>
             <p>$500mil</p>
             <img
               src="./img/tablet.svg"
@@ -152,8 +193,8 @@
             />
             <a href="#">Ver modelos diponibles</a>
           </div>
-           <div class="item-price">
-        <h3>Computadores desde</h3>
+          <div class="item-price">
+            <h3>Computadores desde:</h3>
             <p>$999mill</p>
             <img
               src="./img/computer.svg"
@@ -162,38 +203,48 @@
             />
             <a href="#">Ver modelos diponibles</a>
           </div>
-          </section>
         </div>
       </div>
-      <!-- Warranty -->
+      <!-- garantía -->
       <div class="content-page">
         <h1 class="title-item" id="warranty">Garantía</h1>
-        <h2>Celulares</h2>
-        <div class="item">
-          <img
-            src="./img/cellphone.svg"
-            alt="imagen celular"
-            class="img-products"
-          />
-          <div class="marcas">
-            <h3>Marcas</h3>
-            <ul>
-              <li>Apple</li>
-              <li>Samsung</li>
-              <li>Xiaomy</li>
-              <li>Lenovo</li>
-              <li>Lg</li>
-            </ul>
+
+        <div id="item-section">
+          <div class="item-warranty">
+            <img
+              src="./img/warranty.svg"
+              alt="imagen celular"
+              class="img-products"
+            />
+            <p>
+              <span>Garantía de satisfacción</span>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Dignissimos reiciendis quisquam maxime iusto fugiat laboriosam
+              rerum rem vero asperiores aut illo, soluta modi maiores magnam
+              eligendi porro nam ullam atque!
+            </p>
           </div>
         </div>
-        <div class="description-item">
-          <h3>Descripción</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
-            fuga sequi vitae odio debitis facilis voluptatibus commodi nostrum.
-            Doloremque architecto repellat illum sunt exercitationem in totam
-            tempore rem at natus!
-          </p>
+      </div>
+      <!-- medios de pagos -->
+      <div class="content-page">
+        <h1 class="title-item" id="payment-methods">Medios de pagos</h1>
+
+        <div id="item-section">
+          <div class="item-warranty">
+            <img
+              src="./img/pagos.jpg"
+              alt="imagen celular"
+              class="img-products"
+            />
+            <p>
+              <span>Medios de pagos</span>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Dignissimos reiciendis quisquam maxime iusto fugiat laboriosam
+              rerum rem vero asperiores aut illo, soluta modi maiores magnam
+              eligendi porro nam ullam atque!
+            </p>
+          </div>
         </div>
       </div>
 
