@@ -27,8 +27,9 @@ main #title {
   position: relative;
   height: 3.1em;
   width: 100%;
-  background: rgba(26, 26, 26, 0.808);
+  background: rgba(26, 26, 26, 0.938);
   top: 0;
+  z-index: 1;
 }
 
 main #title h1 {
@@ -44,7 +45,6 @@ main #header {
   height: auto;
   width: 100%;
   background: rgba(26, 26, 26, 0.966);
-  top: 0;
   padding-bottom: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,7 +80,6 @@ main #header #nav-bar {
   width: 100%;
   height: auto;
   background: rgba(26, 26, 26, 0.966);
-  text-align: center;
   grid-area: menu;
   padding: 1em 0;
   border-top: 1px solid silver;
@@ -89,9 +88,8 @@ main #header #nav-bar {
 main #header #nav-bar ul {
   list-style: none;
   padding: 0%;
-  text-align: right;
   background: chocolate;
-  text-align: center;
+  text-align: right;
 }
 
 main #header #nav-bar ul li {
@@ -107,9 +105,169 @@ main #header #nav-bar ul li a {
 }
 
 main .content-page {
-  margin-top: 4em;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 3em auto 0 auto;
   color: white;
-  background: rosybrown;
+  background: rgba(8, 8, 8, 0.685);
+}
+
+main .content-page h1 {
+  text-align: center;
+  font-weight: 100;
+  font-family: "Century Gothic", Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  background: chocolate;
+  color: white;
+}
+
+main .content-page h2 {
+  width: 83%;
+  text-align: center;
+  margin: 1em auto 0.5em auto;
+  font-family: Roboto, "Century Gothic", sans-serif;
+  color: chocolate;
+}
+
+main .content-page .item {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 150px;
+  background: rgba(245, 244, 244, 0.521);
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 2px 5px 6px white;
+          box-shadow: 2px 5px 6px white;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+main .content-page .item .img-products {
+  display: block;
+  float: left;
+  width: 35%;
+  height: auto;
+  margin: 1em;
+}
+
+main .content-page .item .marcas {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 100px;
+  padding-top: 1em;
+  margin-right: 0.5em;
+}
+
+main .content-page .item .marcas h3 {
+  text-align: center;
+  font-weight: 100;
+  font-family: Roboto, "Century Gothic", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.76);
+}
+
+main .content-page .item .marcas ul {
+  margin-top: 0.5em;
+  padding-left: 1.5em;
+  background: white;
+  border-radius: 0.4em;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+}
+
+main .content-page .item .marcas ul li {
+  list-style: square;
+  text-align: left;
+  font-family: Roboto, "Century Gothic", sans-serif;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.76);
+}
+
+main .content-page .description-item {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  padding: 1em;
+  background: white;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  -webkit-box-shadow: 2px 3px 6px white;
+          box-shadow: 2px 3px 6px white;
+}
+
+main .content-page .description-item h3 {
+  color: rgba(0, 0, 0, 0.76);
+}
+
+main .content-page .description-item p {
+  color: rgba(0, 0, 0, 0.76);
+  font-family: Roboto, "Century Gothic", sans-serif;
+  text-align: justify;
+}
+
+main .content-page #price {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0 auto;
+  color: white;
+  background: rgba(247, 150, 39, 0.685);
+  padding-top: 0.2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+}
+
+main .content-page #price .item-price {
+  position: relative;
+  margin: 5px auto;
+  width: 80%;
+  height: auto;
+  background: white;
+  text-align: center;
+  color: black;
+  padding: 0.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 50px auto 50px;
+      grid-template-rows: auto 50px auto 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+}
+
+main .content-page #price .item-price img {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+main .content-page #price .item-price p {
+  font-family: Roboto, "Century Gothic", sans-serif;
+  font-size: 1.5em;
+  color: #e6c018;
+  background: rgba(22, 21, 22, 0.842);
+  padding: 0;
 }
 
 main #footer {
@@ -179,7 +337,7 @@ main #footer .footer-right p {
 }
 
 main #footer .footer-right p #ch-heart {
-  font-size: 5vmin;
+  font-size: 1.5em;
   color: #00ccff;
 }
 
@@ -201,29 +359,14 @@ main #footer a:hover {
 }
 
 @media (min-width: 600px) {
-  main #landing-page {
-    width: 70%;
-  }
-  main #landing-page #footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 0;
-  }
-  main #landing-page #footer .footer-left {
-    border-bottom: 1px solid #5f4a10;
-    margin: 0;
-    margin-bottom: 1.5em;
-  }
-  main #landing-page #footer .footer-left p {
-    border-right: 0px;
-  }
-  main #landing-page #footer .footer-right {
-    margin: 0;
+  main .content-page #price {
+    text-align: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
   }
 }
 

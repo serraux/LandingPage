@@ -26,8 +26,9 @@ main {
     position: relative;
     height: 3.1em;
     width: 100%;
-    background: rgba(26, 26, 26, 0.808);
+    background: rgba(26, 26, 26, 0.938);
     top: 0;
+    z-index: 1;
 
     h1 {
       font-weight: 500;
@@ -42,7 +43,7 @@ main {
     height: auto;
     width: 100%;
     background: rgba(26, 26, 26, 0.966);
-    top: 0;
+    //margin-top: 3.1em;
     padding-bottom: 0.5em;
     display: flex;
     /*  display: grid;
@@ -73,7 +74,6 @@ main {
       width: 100%;
       height: auto;
       background: rgba(26, 26, 26, 0.966);
-      text-align: center;
       grid-area: menu;
       padding: 1em 0;
       border-top: 1px solid silver;
@@ -81,9 +81,8 @@ main {
       ul {
         list-style: none;
         padding: 0%;
-        text-align: right;
         background: chocolate;
-        text-align: center;
+        text-align: right;
 
         li {
           display: inline-block;
@@ -101,9 +100,146 @@ main {
   }
 
   .content-page {
-    margin-top: 4em;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 3em auto 0 auto;
     color: white;
-    background: rosybrown;
+    background: rgba(8, 8, 8, 0.685);
+    h1 {
+      text-align: center;
+      font-weight: 100;
+      font-family: "Century Gothic", Roboto, sans-serif;
+      font-weight: normal;
+      font-size: 1.5em;
+      background: chocolate;
+      color: white;
+    }
+    h2 {
+      width: 83%;
+      text-align: center;
+      margin: 1em auto 0.5em auto;
+      font-family: Roboto, "Century Gothic", sans-serif;
+      color: chocolate;
+    }
+    .item {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      height: 150px;
+      background: rgba(245, 244, 244, 0.521);
+      padding: 1em;
+      display: flex;
+      box-shadow: 2px 5px 6px white;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+
+      .img-products {
+        display: block;
+        float: left;
+        width: 35%;
+        height: auto;
+        margin: 1em;
+      }
+      .marcas {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 100px;
+        padding-top: 1em;
+        margin-right: 0.5em;
+        h3 {
+          text-align: center;
+          font-weight: 100;
+          font-family: Roboto, "Century Gothic", sans-serif;
+          font-size: 1.5em;
+          font-weight: bold;
+          color: rgba(0, 0, 0, 0.76);
+        }
+        ul {
+          margin-top: 0.5em;
+          padding-left: 1.5em;
+          background: white;
+          border-radius: 0.4em;
+          -webkit-border-radius: 0.4em;
+          -moz-border-radius: 0.4em;
+          -ms-border-radius: 0.4em;
+          -o-border-radius: 0.4em;
+          li {
+            list-style: square;
+            text-align: left;
+            font-family: Roboto, "Century Gothic", sans-serif;
+            font-size: 1em;
+
+            color: rgba(0, 0, 0, 0.76);
+          }
+        }
+      }
+    }
+    .description-item {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      padding: 1em;
+      background: white;
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      box-shadow: 2px 3px 6px white;
+
+      h3 {
+        color: rgba(0, 0, 0, 0.76);
+      }
+      p {
+        color: rgba(0, 0, 0, 0.76);
+        font-family: Roboto, "Century Gothic", sans-serif;
+        text-align: justify;
+      }
+    }
+    #price {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 0 auto;
+      color: white;
+      background: rgba(247, 150, 39, 0.685);
+      padding-top: 0.2em;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+
+      .item-price {
+        position: relative;
+        margin: 5px auto;
+        width: 80%;
+        height: auto;
+        background: white;
+        text-align: center;
+        color: black;
+        padding: 0.5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 50px auto 50px;
+        align-items: center;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        -ms-border-radius: 0.5em;
+        -o-border-radius: 0.5em;
+        img {
+          position: relative;
+          margin: 0 auto;
+          display: block;
+          text-align: center;
+        }
+        p {
+          font-family: Roboto, "Century Gothic", sans-serif;
+          font-size: 1.5em;
+          color: rgb(230, 192, 24);
+          background: rgba(22, 21, 22, 0.842);
+          padding: 0;
+        }
+      }
+    }
   }
 
   #footer {
@@ -152,7 +288,7 @@ main {
         text-align: center;
         padding: 0.5em;
         #ch-heart {
-          font-size: 5vmin;
+          font-size: 1.5em;
           color: rgb(0, 204, 255);
         }
         #icon-git {
@@ -173,24 +309,11 @@ main {
   }
 }
 @media (min-width: 600px) {
-  main #landing-page {
-    width: 70%;
-    #footer {
-      display: flex;
-      flex-direction: row;
-      padding: 0;
-      .footer-left {
-        border-bottom: 1px solid rgb(95, 74, 16);
-        margin: 0;
-        margin-bottom: 1.5em;
-        p {
-          border-right: 0px;
-        }
-      }
-      .footer-right {
-        margin: 0;
-      }
-    }
+  main .content-page #price {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
 @media (min-width: 800px) {
