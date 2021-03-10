@@ -79,14 +79,20 @@ main #header #nav-bar {
   bottom: 0;
   padding: 0.5em 0 0 0;
   margin-right: 1.5em;
-  border-top: 1px solid silver;
 }
 
 main #header #nav-bar ul {
   list-style: none;
   padding: 0%;
-  background: rgba(210, 105, 30, 0.568);
+  background: chocolate;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main #header #nav-bar ul li {
@@ -94,6 +100,8 @@ main #header #nav-bar ul li {
   font-family: sans-serif;
   margin: 0 10px;
   font-size: 1.1em;
+  text-align: center;
+  padding: 0.5em 0;
 }
 
 main #header #nav-bar ul li a {
@@ -103,8 +111,14 @@ main #header #nav-bar ul li a {
   font-family: Roboto, "Century Gothic", sans-serif;
 }
 
+main #header #nav-bar ul li a:hover {
+  color: chocolate;
+  background: white;
+  padding: 0.5em;
+}
+
 main .presentación {
-  margin-top: 5.1em;
+  margin-top: 14.1em;
   padding-top: 1em;
 }
 
@@ -476,6 +490,19 @@ main #footer a:hover {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
+  }
+  main #header #nav-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 1em;
+  }
+  main .presentación {
+    margin-top: 7em;
   }
 }
 

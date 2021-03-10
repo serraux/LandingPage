@@ -72,32 +72,40 @@ main {
       bottom: 0;
       padding: 0.5em 0 0 0;
       margin-right: 1.5em;
-      border-top: 1px solid silver;
 
       ul {
         list-style: none;
         padding: 0%;
-        background: rgba(210, 105, 30, 0.568);
+        background: rgb(210, 105, 30);
         text-align: right;
+        display: flex;
+        flex-direction: column;
 
         li {
           display: inline-block;
           font-family: sans-serif;
           margin: 0 10px;
           font-size: 1.1em;
+          text-align: center;
+          padding: 0.5em 0;
 
           a {
             text-decoration: none;
             color: white;
             font-weight: normal;
             font-family: Roboto, "Century Gothic", sans-serif;
+            &:hover {
+              color: chocolate;
+              background: white;
+              padding: 0.5em;
+            }
           }
         }
       }
     }
   }
   .presentación {
-    margin-top: 5.1em;
+    margin-top: 14.1em;
     padding-top: 1em;
 
     img {
@@ -217,12 +225,12 @@ main {
           -moz-border-radius: 0.4em;
           -ms-border-radius: 0.4em;
           -o-border-radius: 0.4em;
+
           li {
             list-style: square;
             text-align: left;
             font-family: Roboto, "Century Gothic", sans-serif;
             font-size: 1em;
-
             color: rgba(0, 0, 0, 0.76);
           }
         }
@@ -391,17 +399,27 @@ main {
   }
 }
 @media (min-width: 600px) {
-  main .content-page #price {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  main .content-page #item-section {
-    .item-warranty {
+  main {
+    .content-page #price {
+      text-align: center;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto;
+    }
+    .content-page #item-section {
+      .item-warranty {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+    }
+    #header #nav-bar ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0 1em;
+    }
+    .presentación {
+      margin-top: 7em;
     }
   }
 }
