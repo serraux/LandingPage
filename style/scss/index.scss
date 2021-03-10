@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap");
+
+* {
+  margin: 0;
+  margin: 0;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+}
+/* text-shadow: 0 1px 2px rgba(0,0,0,0.5), 0px -1px 2px rgba(255,255,255,0.8); */
+/* Estructura clases genéricas CSS */
+main {
+  position: relative;
+  background: url("../../img/fondo-1.jpg");
+  background-attachment: fixed;
+  background-color: rgba(218, 112, 214, 0.658);
+
+  width: 100%;
+
+  #title {
+    position: relative;
+    height: 3.1em;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.808);
+    top: 0;
+
+    h1 {
+      font-weight: 500;
+      text-align: center;
+      padding: 0.7rem;
+      font-size: 1.25rem;
+      color: white;
+    }
+  }
+  #header {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.966);
+    top: 0;
+    padding-bottom: 0.5em;
+    display: flex;
+    /*  display: grid;
+    grid-template-columns: 0.5fr 8fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo name" "menu menu"; */
+
+    img#header-img {
+      width: 40px;
+      height: auto;
+      display: block;
+      margin: 0px 10px;
+      float: left;
+      grid-area: logo;
+    }
+    h1#name {
+      margin-top: 5px;
+      color: white;
+      font-family: "Century Gothic", Roboto, sans-serif;
+      font-weight: 100;
+      float: left;
+      font-size: 3vh;
+      grid-area: name;
+    }
+    #nav-bar {
+      position: absolute;
+      top: 3em;
+      width: 100%;
+      height: auto;
+      background: rgba(26, 26, 26, 0.966);
+      text-align: center;
+      grid-area: menu;
+      padding: 1em 0;
+      border-top: 1px solid silver;
+
+      ul {
+        list-style: none;
+        padding: 0%;
+        text-align: right;
+        background: chocolate;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          font-family: sans-serif;
+          margin: 0 10px;
+          font-size: 1.1em;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .content-page {
+    margin-top: 4em;
+    color: white;
+    background: rosybrown;
+  }
+
+  #footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin-top: 2.2em;
+    background: rgba(54, 50, 32, 0.849);
+    display: flex;
+    flex-direction: column;
+
+    .footer-left {
+      position: relative;
+      margin: 0.5em;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding-bottom: 0.5em;
+
+      p {
+        color: white;
+        font-family: "Century Gothic", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        padding: 0.5em;
+        border-right: 1px solid silver;
+      }
+    }
+    .footer-right {
+      position: relative;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(54, 50, 32, 0.849),
+        rgba(54, 50, 32, 0.493)
+      );
+
+      p {
+        color: white;
+        font-family: "Century Gothic", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        padding: 0.5em;
+        #ch-heart {
+          font-size: 5vmin;
+          color: rgb(0, 204, 255);
+        }
+        #icon-git {
+          width: 20px;
+          height: auto;
+        }
+      }
+    }
+    a:link {
+      color: rgb(243, 246, 247);
+    }
+    a:visited {
+      color: rgb(241, 244, 245);
+    }
+    a:hover {
+      background: steelblue;
+    }
+  }
+}
+@media (min-width: 600px) {
+  main #landing-page {
+    width: 70%;
+    #footer {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      .footer-left {
+        border-bottom: 1px solid rgb(95, 74, 16);
+        margin: 0;
+        margin-bottom: 1.5em;
+        p {
+          border-right: 0px;
+        }
+      }
+      .footer-right {
+        margin: 0;
+      }
+    }
+  }
+}
+@media (min-width: 800px) {
+  main #landing-page {
+    width: 55%;
+    #footer {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      .footer-left {
+        border-bottom: 1px solid rgb(95, 74, 16);
+        margin: 0;
+        margin-bottom: 1.5em;
+        p {
+          border-right: 0px;
+        }
+      }
+      .footer-right {
+        margin: 0;
+      }
+    }
+  }
+}
